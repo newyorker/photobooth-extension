@@ -1,8 +1,8 @@
 {
 	"name": "Photo Booth - The New Yorker",
 	"short_name": "Photo Booth",
-	"description": "Start every New Tab with a collection of photos and views from The New Yorker photo department.",
-	"version": "0.0.2",
+	"description": "The best of The New Yorker's photo blog, each time you open a tab.",
+	"version": "0.0.3",
 	"icons": {
 		"256": "content/img/icon256.png",
 		"128": "content/img/icon128.png",
