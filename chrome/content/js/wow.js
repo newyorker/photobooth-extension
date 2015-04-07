@@ -1,6 +1,10 @@
 /*
 * WOW - v1.0.3 - 2015-01-14
 * Copyright (c) 2015 Matthieu Aussaguel; Licensed MIT
+*
+* Original Source:
+* https://github.com/matthieua/WOW
+*
 */
 (function() {
     var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,

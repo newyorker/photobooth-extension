@@ -1,4 +1,28 @@
+/*
+* Photo Booth Chrome Extension
+*
+* Before you suspend my account or reject this extension please
+* note that the full source code is also available here:
+*
+*   https://github.com/newyorker/photobooth-extension
+*
+* This extension does the following when a New Tab is opened:
+*
+*  - Check cache for data, if stale load data (JSON feed)
+*  - Render HTML with images
+*  - Add scroll events to randomly reveal images as they are scrolled into view
+*
+* Uses:
+*
+*	wow.js:   3rd-party library (wow.js) for animations
+*   index.js: JSON feed of image data
+*
+*/
+
+/* See wow.js - a animation library: https://github.com/matthieua/WOW */
 var wow = new WOW({});
+
+/* Core application */
 var app = {
 
 	run: function() {
