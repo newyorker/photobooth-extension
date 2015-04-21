@@ -27,6 +27,7 @@ var app = {
 
 	run: function() {
 		console.log("Photobooth - The New Yorker (Chrome brwoser extension)");
+
 		if (window.navigator.onLine) {
 			this.requestData();
 		} else {
@@ -161,8 +162,8 @@ var app = {
 			}
 		}
 
-	//	A seperate service pulls teh data and drops it as JSON. Source must be on HTTPS and declared in the manifest
-		xmlhttp.open("GET", "https://dl.dropboxusercontent.com/u/123029/extension/newyorker/photobooth/index.js", true);
+//		A seperate service pulls teh data and drops it as JSON. Source must be on HTTPS and declared in the manifest
+		xmlhttp.open("GET", "https://www.newyorker.com/svc/data/photobooth.js", true); /* JSON feed on our secure newyorker.com domain */				
 		xmlhttp.send();
 	},
 
