@@ -2,7 +2,7 @@
 	"name": "Photo Booth - The New Yorker",
 	"short_name": "Photo Booth",
 	"description": "The best of The New Yorker's photo blog, each time you open a tab.",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"icons": {
 		"256": "content/img/icon256.png",
 		"128": "content/img/icon128.png",
@@ -13,6 +13,6 @@
 	"chrome_url_overrides": {
 		"newtab": "content/index.html"
 	},
-	"content_security_policy": "script-src 'self' https://dl.dropboxusercontent.com; object-src 'self'",
-	"permissions": [ "identity", "https://dl.dropboxusercontent.com/*" ]
+	"content_security_policy": "script-src 'self' https://www.newyorker.com ; object-src 'self'",
+	"permissions": [ "identity", "https://www.newyorker.com/svc/*" ]
 }
