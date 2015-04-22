@@ -26,8 +26,7 @@ var wow = new WOW({});
 var app = {
 
 	run: function() {
-		console.log("Photobooth - The New Yorker (Chrome brwoser extension)");
-
+		console.log("Photobooth - The New Yorker (Chrome brwoser extension) 0.0.7");
 		if (window.navigator.onLine) {
 			this.requestData();
 		} else {
@@ -146,7 +145,7 @@ var app = {
 	requestData: function() {
 		var responseText = this.getFromCache();
 		if (responseText) {
-			this.buildTheDamnThing(JSON.parse(responseText));
+			this.buildTheDamnThing( JSON.parse(responseText) );
 			return;
 		}
 
@@ -154,15 +153,18 @@ var app = {
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == 4 ) {
-				if(xmlhttp.status == 200 && xmlhttp.responseText.length > 99) {
+				if (xmlhttp.status == 200 && xmlhttp.responseText.length > 99) {
 					self.saveToCache(xmlhttp.responseText);
-					self.buildTheDamnThing(JSON.parse(xmlhttp.responseText));
+					self.buildTheDamnThing( JSON.parse(xmlhttp.responseText) );
 					return;
+				} else {
+					document.body.className = "offline";
 				}
 			}
 		}
 
 //		A seperate service pulls teh data and drops it as JSON. Source must be on HTTPS and declared in the manifest
+
 		xmlhttp.open("GET", "https://www.newyorker.com/svc/data/photobooth.js", true); /* JSON feed on our secure newyorker.com domain */				
 		xmlhttp.send();
 	},
