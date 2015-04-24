@@ -24,14 +24,12 @@ Unpacked Extension
 Notes
 -----
 
-The current extension pulls a feed from Dropbox that is updated every X number of minutes. This will eventually change to a newyorker.com URL once we complete the switcher-over from http to https. Until then this setup works very well.
-
 A copy of the feed exists in the 'service' directory.
 
 Issues
 -----
 
-There are no known issues at this time.
+Minor. On initital use its been reported that the images don't fill the full width of the browser window. Reloading the page or resizing the window typically addresses this and it doesn't happen again.
 
 Contributing
 -----
